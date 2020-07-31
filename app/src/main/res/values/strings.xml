@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Formulario Datos</string>
+    <string name="nombres_completos">Nombres completos</string>
+    <string name="celular">Celular</string>
+    <string name="email">E-mail</string>
+    <string name="accion_aceptar">Siguiente</string>
+    <string name="descripcion_contacto">Descripción del contacto</string>
+    <string name="titulo_activity2">Confirmación de datos</string>
+    <string name="confirmacion_nombre">Nombre:</string>
+    <string name="confirmacion_fechaN">Fecha de nacimiento:</string>
+    <string name="confirmacion_email">E-mail:</string>
+    <string name="confirmacion_celular">Celular:</string>
+    <string name="confirmacion_descripcion">Descripción:</string>
+    <string name="btn_editar_datos">Editar datos</string>
+</resources>
