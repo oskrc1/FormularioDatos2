@@ -47,22 +47,23 @@ public class MainActivity extends AppCompatActivity {
                 // calender class's instance and get current date , month and year from calender
                 final Calendar c = Calendar.getInstance();
                 int mYear = c.get(Calendar.YEAR); // current year
-                int mMonth = c.get(Calendar.MONTH); // current month
+                final int mMonth = c.get(Calendar.MONTH); // current month
                 int mDay = c.get(Calendar.DAY_OF_MONTH); // current day
                 // date picker dialog
                 datePickerDialog = new DatePickerDialog(MainActivity.this,
                         new DatePickerDialog.OnDateSetListener() {
-
-                            @Override
                             public void onDateSet(DatePicker view, int year,
                                                   int monthOfYear, int dayOfMonth) {
-                                // set day of month , month and year value in the edit text
-                                Calendar userAge = new GregorianCalendar(year, monthOfYear, dayOfMonth);
+
+
+                                Calendar userAge = new GregorianCalendar(year,monthOfYear, dayOfMonth);
                                 Calendar minAdultAge = new GregorianCalendar();
                                 minAdultAge.add(Calendar.YEAR, -18);
                                 if (minAdultAge.before(userAge)) {
+                                    fecha.setError("Debe ser mayor de 18 años");
                                     datePickerDialog.hide();
-                                }
+                                } else
+
                                 fecha.setText(dayOfMonth + "/"
                                         + (monthOfYear + 1) + "/" + year);
 
@@ -174,7 +175,6 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
-
 
 
 
